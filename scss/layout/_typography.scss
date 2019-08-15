@@ -1,0 +1,42 @@
+@import "../base/mixins";
+html {
+  font-size: 12px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 600;
+  @include media-desktop {
+    font-size: 3.6em;
+  }
+}
+h2 {
+  font-size: 3.4rem;
+  font-weight: 800;
+  margin-bottom: 0.5em;
+  @include media-desktop {
+    font-size: 4rem;
+  }
+}
+header p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  @include media-desktop {
+    font-size: 2rem;
+  }
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+p, a, li {
+  font-size: 1.3rem;
+  line-height: 2em;
+}
+.burger {
+  font-size: 2.5rem;
+}

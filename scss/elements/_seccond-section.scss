@@ -1,0 +1,77 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.seccond-section {
+  background-color: $box-background-color;
+  .container{
+    @include media-desktop {
+      @include flex(row-reverse);
+    }
+  }
+  .text-space {
+    border-bottom: 2px solid $background-color;
+    h3 {
+      padding: 3rem 0 2rem;
+    }
+    p {
+      padding-bottom: 2rem;
+      span {
+        font-weight: bold;
+      }
+    }
+    @include media-desktop {
+      border-bottom: none;
+      margin-left: 4rem;
+      h3 {
+        font-size: 3.5rem;
+        padding: 2.5rem 0 2rem;
+      }
+    }
+
+  }
+  .photos {
+    @include media-desktop {
+      flex-basis: 70%;
+      margin-right: 3rem;
+    }
+    h3 {
+      padding: 3rem 0 2rem;
+    }
+    .picture-wrap{
+      margin-bottom: 3rem;
+      @include flex(row, $justify-content: space-between);
+      flex-wrap: wrap;
+      .pic {
+        height: (101 / 12) * 1rem;
+        width: 48%;
+        margin-bottom: 1rem;
+        @include image-properties;
+        @include media-tablet {
+          height: (101 / 12) * 2rem;
+        }
+        @include media-desktop {
+          height: (101 / 12) * 1.3rem;
+        }
+      }
+      #picture-1 {
+        background-image: url("../assets/pic04.jpg");
+      }
+      #picture-2 {
+        background-image: url("../assets/pic05.jpg");
+      }
+      #picture-3 {
+        background-image: url("../assets/pic06.jpg");
+      }
+      #picture-4 {
+        background-image: url("../assets/pic07.jpg");
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 3rem;
+    @include media-desktop {
+      width: 45%;
+    }
+  }
+}

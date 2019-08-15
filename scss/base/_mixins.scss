@@ -1,0 +1,28 @@
+@mixin flex($direction:row,
+$justify-content:flex-start,
+$align-items:flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+//Breakpoints
+// >= 768px tablet
+//>= 992px desktop
+
+@mixin media-tablet {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin media-desktop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin image-properties {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: .5rem;
+}

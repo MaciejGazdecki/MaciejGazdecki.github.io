@@ -1,0 +1,35 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.first-section {
+  @include flex(column);
+  @include media-desktop {
+    @include flex(row, $justify-content: space-between);
+  }
+  .article {
+    background-color: $box-background-color;
+    margin: 4rem 0;
+    border-radius: .5rem;
+    @include media-desktop {
+      width: 32%;
+    }
+    .picture {
+      background-image: url("../assets/pic01.jpg");
+      width: 100%;
+      height: 21rem;
+      @include image-properties;
+      @include media-tablet {
+        height: 40rem;
+      }
+      @include media-desktop {
+        height: 30rem;
+      }
+    }
+    .text-space {
+      margin: 3rem 3rem;
+    }
+    .text-space2 {
+      padding: 3rem 3rem;
+    }
+  }
+}

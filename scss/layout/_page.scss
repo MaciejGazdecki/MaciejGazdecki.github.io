@@ -1,0 +1,16 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+.wrapper {
+  margin: 0 2rem;
+  @include media-tablet {
+    margin: 0 2rem;
+  }
+  @include media-desktop {
+    margin: 0 15em;
+  }
+}
