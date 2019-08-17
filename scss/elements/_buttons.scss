@@ -22,3 +22,13 @@
     margin-right: 0.5em;
   }
 }
+.buttons .btn {
+  @include media-desktop-1680px {
+    font-size: 2.3rem;
+    font-weight: bolder;
+  }
+  @include media-desktop-big {
+    font-size: 2.6rem;
+    font-weight: bolder;
+  }
+}

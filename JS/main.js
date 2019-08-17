@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function(){
     (function burgerMenu() {
         burger.addEventListener('click', function () {
             navMenu.classList.toggle('active');
-            navMenu.classList.contains('active') ? burger.style.width = '39.5%' : burger.style.width = '100%';
         });
 
         const mobile = window.matchMedia('screen and (max-width: 991px)');

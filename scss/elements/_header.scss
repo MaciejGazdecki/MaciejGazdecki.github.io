@@ -21,6 +21,16 @@
       align-self: flex-start;
     }
   }
+  @include media-desktop-1680px {
+    h1 {
+      align-self: flex-start;
+    }
+  }
+  @include media-desktop-big {
+    h1 {
+      align-self: flex-start;
+    }
+  }
   > section{
     background-color: $box-background-color;
     width: 100%;
@@ -45,12 +55,32 @@
         flex-basis: 50%;
       }
     }
+    @include media-desktop-1680px {
+      flex-direction: row;
+      padding: 4.5rem;
+      > section {
+        flex-basis: 50%;
+      }
+    }
+    @include media-desktop-big {
+      flex-direction: row;
+      padding: 4.5rem;
+      > section {
+        flex-basis: 50%;
+      }
+    }
     h2, p {
       text-align: center;
       @include media-tablet {
         text-align: left;
       }
       @include media-desktop {
+        text-align: left;
+      }
+      @include media-desktop-1680px {
+        text-align: left;
+      }
+      @include media-desktop-big {
         text-align: left;
       }
     }
@@ -63,6 +93,12 @@
       @include flex(column, $justify-content:center, $align-items: center);
     }
     @include media-desktop {
+      @include flex(column,$justify-content:center, $align-items: center);
+    }
+    @include media-desktop-1680px {
+      @include flex(column,$justify-content:center, $align-items: center);
+    }
+    @include media-desktop-big {
       @include flex(column,$justify-content:center, $align-items: center);
     }
 
@@ -80,6 +116,18 @@
       .btn {
         @include flex(row-reverse, $justify-content: space-around);
         width: 67%;
+      }
+    }
+    @include media-desktop-1680px {
+      .btn {
+        @include flex(row-reverse, $justify-content: space-around);
+        width: 69%;
+      }
+    }
+    @include media-desktop-big {
+      .btn {
+        @include flex(row-reverse, $justify-content: space-around);
+        width: 72%;
       }
     }
   }

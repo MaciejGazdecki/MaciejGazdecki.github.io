@@ -8,13 +8,31 @@
   @include media-desktop {
     @include flex (row, $justify-content: center)
   }
+  @include media-desktop-1680px {
+    @include flex (row, $justify-content: center)
+  }
+  @include media-desktop-big {
+    @include flex (row, $justify-content: center)
+  }
   .footer-section {
     padding: 3rem 0;
     @include media-desktop {
       @include flex (row, $justify-content: space-between);
     }
+    @include media-desktop-1680px {
+      @include flex (row, $justify-content: space-between);
+    }
+    @include media-desktop-big {
+      @include flex (row, $justify-content: space-between);
+    }
     p {
       @include media-desktop {
+        margin-right: 1.5rem;
+      }
+      @include media-desktop-1680px {
+        margin-right: 1.5rem;
+      }
+      @include media-desktop-big {
         margin-right: 1.5rem;
       }
       a {

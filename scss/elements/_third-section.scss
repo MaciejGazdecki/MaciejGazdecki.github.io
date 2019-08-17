@@ -9,6 +9,12 @@
   @include media-desktop {
     @include flex(row, $justify-content: space-between);
   }
+  @include media-desktop-1680px {
+    @include flex(row, $justify-content: space-between);
+  }
+  @include media-desktop-big {
+    @include flex(row, $justify-content: space-between);
+  }
 }
 .links {
   padding: 3rem 0;
@@ -18,6 +24,12 @@
     flex-basis: 50%;
   }
   @include media-desktop {
+    border-bottom:none;
+  }
+  @include media-desktop-1680px {
+    border-bottom:none;
+  }
+  @include media-desktop-big {
     border-bottom:none;
   }
   h3 {
@@ -51,6 +63,12 @@
       border-bottom:none;
     }
     @include media-desktop {
+      border-bottom:none;
+    }
+    @include media-desktop-1680px {
+      border-bottom:none;
+    }
+    @include media-desktop-big {
       border-bottom:none;
     }
   }

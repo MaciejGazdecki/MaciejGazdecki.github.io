@@ -6,6 +6,14 @@
     @include flex(row, $justify-content:space-between, $align-items:center);
     width: 100%;
   }
+  @include media-desktop-1680px {
+    @include flex(row, $justify-content:space-between, $align-items:center);
+    width: 100%;
+  }
+  @include media-desktop-big {
+    @include flex(row, $justify-content:space-between, $align-items:center);
+    width: 100%;
+  }
 }
 
 nav.nav {
@@ -13,6 +21,18 @@ nav.nav {
   top:1%;
   left:2%;
   @include media-desktop {
+    position: relative;
+    @include flex(row, $justify-content:space-between);
+    top:1rem;
+    left:1%;
+  }
+  @include media-desktop-1680px {
+    position: relative;
+    @include flex(row, $justify-content:space-between);
+    top:1rem;
+    left:1%;
+  }
+  @include media-desktop-big {
     position: relative;
     @include flex(row, $justify-content:space-between);
     top:1rem;
@@ -30,6 +50,7 @@ nav.nav {
   color: $text-alt-color;
   padding: .8rem 1.5rem;
   border-radius: 1rem;
+  outline: none;
 }
 .nav-list {
   display: none;
@@ -42,10 +63,46 @@ nav.nav {
     background-color: $background-color;
     border-radius: none;
   }
+  @include media-desktop-1680px {
+    display: flex !important;
+    justify-content: space-between;
+    align-content: center;
+    background-color: $background-color;
+    border-radius: none;
+  }
+  @include media-desktop-big {
+    display: flex !important;
+    justify-content: space-between;
+    align-content: center;
+    background-color: $background-color;
+    border-radius: none;
+  }
   li {
     font-weight: bold;
     border-bottom: 1px solid $text-color;
     @include media-desktop {
+      border-bottom: none;
+      margin-left: 3rem;
+      padding-left: 1rem;
+      border-radius: 1rem;
+      @for $i from 2 through 5 {
+        &:nth-child(#{$i}):hover {
+          background-color: $text-alt-color;
+        }
+      }
+    }
+    @include media-desktop-1680px {
+      border-bottom: none;
+      margin-left: 3rem;
+      padding-left: 1rem;
+      border-radius: 1rem;
+      @for $i from 2 through 5 {
+        &:nth-child(#{$i}):hover {
+          background-color: $text-alt-color;
+        }
+      }
+    }
+    @include media-desktop-big {
       border-bottom: none;
       margin-left: 3rem;
       padding-left: 1rem;
@@ -77,9 +134,37 @@ nav.nav {
     border-radius: 1rem;
     box-shadow: 0 0 .4rem .25rem $background-color;
   }
+  @include media-desktop-1680px {
+    padding-left: 0;
+    position: absolute;
+    background-color: $box-background-color;
+    z-index: 1;
+    width: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .4rem .25rem $background-color;
+  }
+  @include media-desktop-big {
+    padding-left: 0;
+    position: absolute;
+    background-color: $box-background-color;
+    z-index: 1;
+    width: 15rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .4rem .25rem $background-color;
+  }
   li {
     font-weight: normal;
     @include media-desktop {
+      padding: 1rem 1rem;
+      margin-left: 0;
+      border-bottom: 1px solid $background-color;
+    }
+    @include media-desktop-1680px {
+      padding: 1rem 1rem;
+      margin-left: 0;
+      border-bottom: 1px solid $background-color;
+    }
+    @include media-desktop-big {
       padding: 1rem 1rem;
       margin-left: 0;
       border-bottom: 1px solid $background-color;
@@ -107,10 +192,40 @@ nav.nav {
       z-index: 1;
       background-color: $box-background-color;
     }
+    @include media-desktop-1680px {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      transform: rotate(45deg);
+      top:-3%;
+      left: 10%;
+      z-index: 1;
+      background-color: $box-background-color;
+    }
+    @include media-desktop-big {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      transform: rotate(45deg);
+      top:-3%;
+      left: 10%;
+      z-index: 1;
+      background-color: $box-background-color;
+    }
   }
 }
 .nav-list-two {
   @include media-desktop {
+    left: 100%;
+    top: 25%;
+  }
+  @include media-desktop-1680px {
+    left: 100%;
+    top: 25%;
+  }
+  @include media-desktop-big {
     left: 100%;
     top: 25%;
   }
@@ -123,6 +238,20 @@ nav.nav {
 }
 #welcome {
   @include media-desktop {
+    background-color: $text-color;
+    border-radius: 1rem;
+    a {
+      color: $text-alt-color;
+    }
+  }
+  @include media-desktop-1680px {
+    background-color: $text-color;
+    border-radius: 1rem;
+    a {
+      color: $text-alt-color;
+    }
+  }
+  @include media-desktop-big {
     background-color: $text-color;
     border-radius: 1rem;
     a {

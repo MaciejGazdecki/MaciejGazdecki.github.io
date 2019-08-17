@@ -11,6 +11,15 @@ body {
     margin: 0 2rem;
   }
   @include media-desktop {
-    margin: 0 15em;
+    margin: 0 auto;
+    width: 960px;
+  }
+  @include media-desktop-1680px {
+    margin: 0 auto;
+    width: 1200px;
+  }
+  @include media-desktop-big {
+    margin: 0 auto;
+    width: 1400px;
   }
 }

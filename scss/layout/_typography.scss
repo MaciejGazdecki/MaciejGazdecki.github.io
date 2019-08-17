@@ -19,6 +19,12 @@ h2 {
   @include media-desktop {
     font-size: 4rem;
   }
+  @include media-desktop-1680px {
+    font-size: 5rem;
+  }
+  @include media-desktop-big {
+    font-size: 6rem;
+  }
 }
 header p {
   font-size: 1.7rem;
@@ -26,6 +32,12 @@ header p {
   line-height: 1.5em;
   @include media-desktop {
     font-size: 2rem;
+  }
+  @include media-desktop-1680px {
+    font-size: 3rem;
+  }
+  @include media-desktop-big {
+    font-size: 4rem;
   }
 }
 h3 {
@@ -36,6 +48,9 @@ h3 {
 p, a, li {
   font-size: 1.3rem;
   line-height: 2em;
+  @include media-desktop-big {
+    font-size: 1.5rem;
+  }
 }
 .burger {
   font-size: 2.5rem;

@@ -6,11 +6,26 @@
   @include media-desktop {
     @include flex(row, $justify-content: space-between);
   }
+  @include media-desktop-1680px {
+    @include flex(row, $justify-content: space-between);
+  }
+  @include media-desktop-big {
+    @include flex(row, $justify-content: space-between);
+  }
   .article {
     background-color: $box-background-color;
     margin: 4rem 0;
     border-radius: .5rem;
     @include media-desktop {
+      width: 32%;
+      //flex: 300px;
+    }
+    @include media-desktop-1680px {
+      //flex: ((1200 - 60) / 3) *1px;
+      width: 32%;
+    }
+    @include media-desktop-big {
+      //flex: ((1400 - 60) / 3) *1px;
       width: 32%;
     }
     .picture {
@@ -22,6 +37,12 @@
         height: 40rem;
       }
       @include media-desktop {
+        height: 20rem;
+      }
+      @include media-desktop-1680px {
+        height: 25rem;
+      }
+      @include media-desktop-big {
         height: 30rem;
       }
     }
@@ -30,6 +51,14 @@
     }
     .text-space2 {
       padding: 3rem 3rem;
+    }
+    @include media-desktop {
+      .text-space {
+        margin: 3rem 2.5rem;
+      }
+      .text-space2 {
+        padding: 3rem 2.5rem;
+      }
     }
   }
 }
