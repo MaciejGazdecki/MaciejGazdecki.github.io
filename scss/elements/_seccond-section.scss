@@ -93,6 +93,12 @@
         width: 48%;
         margin-bottom: 1rem;
         @include image-properties;
+        @include media-mobile-L {
+          height: (101 / 12) * 1.2rem;
+        }
+        @include media-mobile-XL {
+          height: (101 / 12) * 1.4rem;
+        }
         @include media-tablet {
           height: (101 / 12) * 2rem;
         }
