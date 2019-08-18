@@ -12,6 +12,14 @@ $align-items:flex-start) {
   background-repeat: no-repeat;
   border-radius: .5rem;
 }
+@mixin text-space-properties {
+  border-bottom: none;
+  margin-left: 4rem;
+  h3 {
+    font-size: 3.5rem;
+    padding: 2.5rem 0 2rem;
+  }
+}
 
 // breakpoints
 @mixin media-mobile-S {
