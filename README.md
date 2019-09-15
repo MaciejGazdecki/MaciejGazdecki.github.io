@@ -7,4 +7,6 @@ all small devices as well as for tablets and large desktops up tu 1920*1080px.
 
 I hope you like it :)
 
+https://maciejgazdecki.github.io/RWD-SASS-Flexbox-Projekt/
+
 Maciej
